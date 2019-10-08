@@ -48,7 +48,7 @@ function decode(expr) {
     
  result = result.map(i => i.reduce((a,b) => (a+b)));
      
- result = result.map(i => i.replace(/11/g, '-')).map(i => i.replace(/10/g, '.')).map(i => i.replace(/0/g, '')).map(i => i.replace(/\*/g, ' '));
+ result = result.map(i => i.replace(/11/g, '-').replace(/10/g, '.').replace(/0/g, '').replace(/\*/, ' ').replace(/\*/g, ''));
  
  result = result.map((i) => {               
     for (key in MORSE_TABLE) {
